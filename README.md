@@ -8,6 +8,8 @@ To appear in IEEE Workshop on Security & Privacy on the Blockchain (co-located w
 
 # Implementation
 
+We will open-source ProMutator after our paper is officially published.
+
 # Evaluation
 
 * We applied ProMutator to analyze the transactions from block 11,090,000 to 11,490,000 (Oct.– Dec. 2020) on the Ethereum Mainnet.
@@ -20,6 +22,6 @@ To appear in IEEE Workshop on Security & Privacy on the Blockchain (co-located w
 
 ## Responsible Disclosure
 
-* All details of the discovered vulnerabilities in this paper should remain confidential until the developers of the vulnerable protocols confirmed the vulnerabilities are patched or do not cause any significant risk.
+* All details of the newly discovered vulnerabilities in this paper should remain confidential until the developers of the vulnerable protocols confirmed the vulnerabilities are patched or do not cause any significant risk.
 * In cases where the developers are unreachable after 30 days of our first attempt to contact, we will announce the discovery of the vulnerabilities to urge users to remove funds from the vulnerable protocols at least 10 days before publishing any technical details.
 * If you find any 0-day vulnerabilities using ProMutator, please contact us immediately and follow a responsible disclosure guideline.
