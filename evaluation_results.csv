@@ -1,69 +1,69 @@
 Ref AMM,Detection Rule,Contract Address,Contract Name,Transactions,Transactions (More),Price-related Function,Price Oracle Contract Address,Price Oracle Contract Name,Line,Vulnerable (TP),Short Reason,Comments,Currently Vulnerable,Disclosure Progress
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state,,Y,Contacting admin
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),"Though calc_token_amount is used, it does not affect transferred amounts.",N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,0x20b1ddf9fa25d713060c5510d10cb081ed3f1409,Proxy -> InstaAccount,0x17ef2d072beff438628bffa4a26c35a803e4ff6e2e8b6e66fc38872f9a5d0aed,0x3c5011349cddc38fd6162e6af4545be004fa53d82c4d5bce8fae418dcc764082,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,307,N,Direct operation on AMM (remove liquidity),"Though calc_token_amount is used, it does not affect transferred amounts.",N,N/A
+Curve,RT,0xc391d1b08c1403313b0c28d47202dfda015633c4,VaultProxy -> Vault (frenBTC),0x194316c89b8b4713572446bcf9d4f46884ea6fffa615aec52c921af93924dc98,0x557fee76082c37aa17d544d94887e2433af4b7c7cd4ff62a116692d481244dc2,calc_withdraw_one_coin,0xd2429c20af3eb06b15c08b5290f4971b9fac20b1,CRVStrategyRENBTCMainnet,1295,Y,Invested underlying balance depends on Curve pool state,This vault is now invulnerable since the strategy has changed.,N,N/A
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,0xab7fa2b2985bccfc13c6d86b1d5a17486ab1e04c,VaultProxy -> Vault (fDAI),0x2aedd1ad8bfaf194ef8bb61f1153332702c6fee9296296c5617c525614a98766,,calc_withdraw_one_coin,0x484695155bcfb9fe647d6dd59020dc7a795195da,N/A,N/A,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Withdrawal amount depends on Curve pool state,,Y,Contacting admin
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,0xf8ce90c2710713552fb564869694b2505bfc0846,DepositHelper,0x419d209ae4f355c9e545a9a0dcdd01e7983620c78c36ba498862d601b0466738,0xbb213c46821e781801db81b5cc97f8a23de456c23912ca14a2108508b3ad2f43,calc_withdraw_one_coin,0x194d6ec937701257ca7e387ba99e952b48469a55,N/A,N/A,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,,N,N/A
-Curve,RT,,,,,"calc_withdraw_one_coin,
-calc_token_amount",,,,Y,Self balance depends on Curve pool state ,"See the convert_shares_rate function. Same as the Value DeFi attack.
+Curve,RT,0xc07eb91961662d275e2d285bdc21885a4db136b0,Vault (fWBTC),0x42f23814ddf1e0299b793c49c4e0e6d95ad2fad62fd6fefb29bb0cdbe2ec2be8,0x624bfbee1ce743dc0856a70dd8e593bcf087c56309dde228ab54ef153cb02c99,calc_withdraw_one_coin,0xe7048e7186cb6f12c566a6c8a818d9d41da6df19,CRVStrategyWBTCMainnet,1297,Y,Invested underlying balance depends on Curve pool state,,N,N/A
+Curve,RT,0x8764f2c305b79680cfcc3398a96aedea9260f7ff,ValueMultiVaultBank,0x449c1669f0ec2fac561e8139efe1a2fe83ade9bc1faff6e4f0f2e97a3abba0ce,,"calc_withdraw_one_coin,
+calc_token_amount",0x57cda125d0c7b146a8320614ccd6c55999d15bf2,ShareConverter,1018,Y,Self balance depends on Curve pool state ,"See the convert_shares_rate function. Same as the Value DeFi attack.
 This vault is now invulnerable since the strategy has changed.",N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source.,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source.,N,N/A
+Curve,RT,0xc7ee21406bb581e741fbb8b21f213188433d9f2f,VaultUSDT (fUSDT),0x460a4b93a35386178eaae1f8789afb0de5e2ee9b27eef783dda8fe9ea5581f97,0xf51e420da0b22a1549c87b83be0b5512e860a62df63f12afaca3b5f40542d1c9,calc_withdraw_one_coin,0x4e73da10ea673cebeb5e99cb8cf8a90925bf2bb6,N/A,N/A,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source.,N,N/A
+Curve,RT,0xe85c8581e60d7cd32bbfd86303d2a4fa6a951dac,VaultDAI (fDAI),0x482a0fceff6cc7413d7dea192718e91d63dde581aee427dbedb1eb29b24ecd89,0x5f9edc01c77e68ceee4b9d446eae3cea84c2950b932a78833a332861c7472d5c,calc_withdraw_one_coin,0x194d6ec937701257ca7e387ba99e952b48469a55,N/A,N/A,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source.,N,N/A
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
 Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,"Direct operation on AMM (withdraw & remove liquidity), yet the price oracle 
+Curve,RT,0x053c80ea73dc6941f518a68e2fc52ac45bde7c9c,VaultProxy -> Vault (fUSDT),0x5e94f3f90f20632f2cc1d2749593ed070d677689e1baefb192e84e7531c715a6,0xca3fc27565679298d430a92d02245466cae26677c5281ff2b5d98758f7b4229d,calc_withdraw_one_coin,0x048259be3bc7fb423c46ed49ae60f086f8f5941a,N/A,N/A,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,0x7674622c63bee7f46e86a4a5a18976693d54441b,VaultProxy -> Vault (fTUSD),0x66a9504a22e71bf425b186a4c979476ef4a75929072e1f5e10d268b9dbf0f6a9,0x6a2828098d32a53d546bbd166685c1874100214b359db1c0d0c942e60efb0e47,calc_withdraw_one_coin,0x19b2208a05c6164554be837d32f144c77dddcb6b,N/A,N/A,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,0x6774305359234f12e766e07f36462104f00ab0b2,Proxy -> InstaAccount,0x6c8ddadb78f8ca4d423896752f76e2ca69acbfa020b4fa6eab46107818fe9723,,calc_withdraw_one_coin,0x861a2250fcdbe57041289623561d5d79585df5dc,ConnectCurveY,458,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0x765c87ede7f2033849dd7a7c4a158dcc9750b79e,Proxy -> InstaAccount,0x755955175b2c6a229cb53907ae6624f7ef5a431f38b7291024fef57b542a0774,,calc_withdraw_one_coin,0x861a2250fcdbe57041289623561d5d79585df5dc,ConnectCurveY,458,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0x5d9d25c7c457dd82fc8668ffc6b9746b674d4ecb,VaultProxy -> Vault (fWBTC),0x8535fad555d62bd0fd3cdb604df6cc2b470b4ae2737626be5104f41abc951e1e,0xd44bda7af96b7c5b7bc0c46bb3408d6102cde3eb5def3094acd50cfd80309460,calc_withdraw_one_coin,0x3f31edcd57b2461fd2650f4a1066a97f73b97158,N/A,N/A,Y,Self balance depends on Curve pool state ,,N,N/A
+Curve,RT,0xfbe122d0ba3c75e1f7c80bd27613c9f35b81feec,VaultProxy -> Vault (frenBTC),0x8692c3b0ad3b12d5c15ca5ab482175eb6f79925314d50d49a0ec2284e6a4f3f6,0xe3400594ca925fc84371a2673b36fe0f1f8db2c42160bbbddfff0aa000f481d7,calc_withdraw_one_coin,0x2eadfb06f9d890eba80e999eaba2d445bc70f006,CRVStrategyRENBTCMainnet,1297,Y,Invested underlying balance depends on Curve pool state,,N,N/A
+Curve,RT,0x9b3136396f7229827a61fe797fa144d0a5f55ff9,Proxy -> InstaAccount,0x9299198351b385a2464d0992269d25b1c96fdea966d204547fdc7551ebacfceb,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,307,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0xa43e2619fe8e0900df24330b30ba0eaa7616c3d8,Proxy -> InstaAccount,0x9492cf75d1393ddee404f8c5a7792bfc4ae211b10ec5d78913be0779d3d205d2,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,307,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0x29cebbfd58ebc13603889b43121ff20db683722c,InstaAcount,0x9cfd70b0ba59311e144b8631739db6e7968f357ff140bd122613d80c29eba1c4,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,289,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0xf0358e8c3cd5fa238a29301d0bea3d63a17bedbe,VaultProxy -> CRVStrategyStableMainnet,0x9f8cdb202819a2e888ba8eec48ab1baa07e0b3603ac1ac13c07ef5f9d54dbbf5,,calc_withdraw_one_coin,0x343a3c86480f09e551ff8e8635495a8f78d86705,N/A,N/A,N,"Direct operation on AMM (withdraw & remove liquidity), yet the price oracle 
 contract seems to be vulnerable to POA",,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,use the value return from calc_withdraw_one_coin to calculate balance,,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Manipulate on AMM pool directly,,N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),"This vault is different from the other with the same name.
+Curve,RT,0x1555e4a654c94ef48396e60b8790ad44800fc76b,InstaAcount,0xa1b4b33dd8c4e9d9c509498b547132b94bc9312a2d3f7ed7ea3635fb03f7206a,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,289,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0xc9afe9fb2146330e45b0b26a84407be02f0b1fca,InstaAcount,0xa4ab08c24c29e4da94cbdbef10352adcc2c7615fceac9d8c3953a8d2fc541f3d,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,289,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0x22de3eb10b1f8b5c4a907407206ae034f7d37dc0,bamVault (bDAI),0xb25ef46b1faf61922fa48ee15b8e008b4bbfc4695418d7c32895d20658808c77,,calc_withdraw_one_coin,0x4248e1cd0fbce71c8da18d8e11aa2c17e426ffad,StrategyCurve3TokenPool,673,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
+Curve,RT,0xc3f7ffb5d5869b3ade9448d094d81b0521e8326f,VaultUSDC,0xbadbed4de48bc810463661b1c1cce0cd358867ba68859d4b8b7f4316e1f4a656,0xce9545d6dca58ff49ca26b6de71806115e73b3be2e6b9b0ae022139d3fcfe989,calc_withdraw_one_coin,0x68e6aa634b22dd28c4c22cc9fc4c1900e8bea90b,CRVStrategyStableMainnet,982,Y,use the value return from calc_withdraw_one_coin to calculate balance,,N,N/A
+Curve,RT,0x8d9d4123d48d860422667cfa95ce8ba4e0c15676,InstaAcount,0xda05ef3726b387c51220db0f510a957977e311cad9f6eda5da8d0c7a8c4ffac4,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,440,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
+Curve,RT,0x3def81755f59026f76b15e322b19e07d741c5dbf,InstaAcount,0xdeec19467c0ddaec46b478901cac26ac901a3516508c4f255b7470fcd8f3d50e,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,289,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
+Curve,RT,0xbcb44f0d09ac81f952539a35ab4f94260fc70bb7,bamVault (bDAI),0xe18365b0164bc73dd4984cfc0d792c95ab72d39baa15333537f800e7544bc8fe,,calc_withdraw_one_coin,0xe6f851ca226511dc54c6d8f432d70aaecf19d197,StrategyCurve3TokenPool,690,N,Manipulate on AMM pool directly,,N,N/A
+Curve,RT,0x290c2df684d9dc7bd094061e5bbb562d49e6bbc5,bamVault (bUSDC),0xede96f46c102d3d39e7f720787169bf8b6aa49cac8263f0830c6a411754d0095,,calc_withdraw_one_coin,0xf59cb7e19c771afb2a636c117d4322bc403058c1,StrategyCurve3TokenPool,707,N,Direct operation on AMM (remove liquidity),"This vault is different from the other with the same name.
 This one uses get_virtual_price and thus is not vulnerable.",N,N/A
-Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
-Curve,RT,,,,,N/A,,,,N,N/A,INVALID. Not Curve-based price oracle.,N,N/A
-Curve,RT,,,,,calc_token_amount,,,,N,Direct operation on AMM (add liquidity),,N,N/A
-Curve,RT,,,,,calc_token_amount,,,,N,Direct operation on AMM (remove liquidity),This is Curve Zap and thus should be out-of-scope.,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),Calculate how many tokens are needed before adding liquidity.,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),Calculate how many tokens are needed before adding liquidity.,N,N/A
+Curve,RT,0xbbcae4807693d526804a9e9cbdfe02db0fd80918,Proxy -> InstaAccount,0xf58fd0294f7eca5936b63777af751d3860918aec672ee518b21e1f2f6e4cee95,,calc_withdraw_one_coin,0xc74902ad45c8223da10efdcff2ded12184e9d9b5,ConnectCurve,289,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,0x3872e725863c6c671a306a50a3d6faa1e6502563,Proxy -> InstaAccount,0x2e6d04fa302429b96e69c76c97e3c49f2457aeb0bd5919b3561f11b60c930060,0x854e33e738f7a32e6699b5c6df1bb6104c8d203171faae0439bb9cf926922523,N/A,N/A,N/A,N/A,N,N/A,INVALID. Not Curve-based price oracle.,N,N/A
+Curve,RT,0x73ab2bd10ad10f7174a1ad5afae3ce3d991c5047,CurveExchangeAdapter,0x85c5bd0df458da4aafb81d72e05240ab0d4b39edf3bed943744535297b6cb437,,calc_token_amount,0x73ab2bd10ad10f7174a1ad5afae3ce3d991c5047,CurveExchangeAdapter,333,N,Direct operation on AMM (add liquidity),,N,N/A
+Curve,RT,0x09672362833d8f703d5395ef3252d4bfa51c15ca,Vyper_contract,0xfdfb33e1c5a6f66ad65effed128c1f8e3ea259d84bbdc27609f836be6e6c7835,,calc_token_amount,0x09672362833d8f703d5395ef3252d4bfa51c15ca,Vyper_contract,N/A,N,Direct operation on AMM (remove liquidity),This is Curve Zap and thus should be out-of-scope.,N,N/A
+Uniswap,RT,0xb7bf6d2e6c4fa291d6073b51911bac17890e92ec,UniswapGoblin,0x041347385fdb63eb1a01a0a45b850e717e8599258e9e464059958ee2b6056d3b,0x1669b70f3737058ce091e004c831b82440ad5bb24769c8f6a2942188ab17b473,getReserves,0x942d9e12bc440fe9c374e67dfb0328fb1fbfcd3d,StrategyAllETHOnly,638,N,Direct operation on AMM (add liquidity),Calculate how many tokens are needed before adding liquidity.,N,N/A
+Uniswap,RT,0xe83554b397bda8ecae7fee5aee532e83ee9eb29d,UniswapV2_ZapIn_General_V2_4_2,0x09f456a2ae002a8eeace5179f95510c5a2659bcf345b17583773e0e7e6871b15,0x86894bd81388a6e2a4f39d4bc9aafa2b380372b56d375027b613f2747517bf8e,getReserves,0xe83554b397bda8ecae7fee5aee532e83ee9eb29d,UniswapV2_ZapIn_General_V2_4_2,1028,N,Direct operation on AMM (add liquidity),Calculate how many tokens are needed before adding liquidity.,N,N/A
 Uniswap,RT,,,,,getReserves,,,,Y,User's reward depends on Uniswap pool state,Calculate how many LP tokens can be obtained for a given amount of ETH.,Y,Contacting admin
-Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),"The entry function is ""provide(uint256 value)"".",N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
+Uniswap,RT,0x70a87e1b97436d2f194b8b9ebf337bfc7521c70f,Pool,0x411fa378cf7a5aa96556e386d51488c41765332fb9577eb22806464d22239a59,0xa0670d492b7bc09c8a60b142a249b4a524109b1a7c7cd50258cd587cc4b7db89,getReserves,0x70a87e1b97436d2f194b8b9ebf337bfc7521c70f,Pool,2416,N,Direct operation on AMM (add liquidity),"The entry function is ""provide(uint256 value)"".",N,N/A
+Uniswap,RT,0x19b3eb3af5d93b77a5619b047de0eed7115a19e7,Proxy -> GnosisSafe,0x4b79b3edf08a29b75df3e0ac85e0f14ce646c4a20d42ca5678076633ad63575e,0x79e781b436e9143259430be9e0a37018d1a17592ec046e423049206b012b8035,getReserves,0x728bbe9bbee3af78ad611315076621865950b344,N/A,N/A,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
 Uniswap,RT,,,,,getReserves,,,,Y,Unstake amount of LP tokens depends on Uniswap pool state,,Y,Admin acknowledged
-Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router01 router,,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,"It will not allow amount of Weth become too high, which is kind of anti-flashloan, 
+Uniswap,RT,0xaf0d451ff07031765f7a6b77deb52c5ba9f3c58b,Proxy -> GnosisSafe,0x7c7f4f0a10f214e4ca6e18e3b1b336c06104587c4d40249921f175761a23796a,,getReserves,0x728bbe9bbee3af78ad611315076621865950b344,N/A,N/A,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
+Uniswap,RT,0xe33377bcc205a3b0a9805ded6da29cd451af05c2,DSProxy -> CompoundFlashLoanTaker,0x806c827f1a0832f29986a6d328f9ff0819819478216994fc670c1c2f400f9bd3,,getReserves,0xf164fc0ec4e93095b804a4795bbe1e041497b92a,UniswapV2Router01,160,N,From UniswapV2Router01 router,,N,N/A
+Uniswap,RT,0x68a98b6d6a2d1a69b5158745a578cdf46c416043,Proxy -> OneInchExchange,0x83c3298e65b5369c909af633b840fdcf25a96270d212db807fa50a932473e462,,getReserves,0x728bbe9bbee3af78ad611315076621865950b344,N/A,N/A,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
+Uniswap,RT,0xb903640c289d4fc7a520b6cee419b59c77fb69c8,DrainMaster -> MasterVampire.drain,0x8b08c722ff882670ba84724bd8e29226647a917f293b9071731b60df90153147,0x8f46aca295a6be83d01df5933d1a893aa642edad4560fc80e1128be6f8fe906c,getReserves,0x2e813f2e524db699d279e631b0f2117856eb902c,priceIsUnderRejectionThreshold,375,N,"It will not allow amount of Weth become too high, which is kind of anti-flashloan, 
 also it directly manipulate on AMM pools, this considered FP.",,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router02 router (swapExactTokensForETH),"Two txs detected, both call getReserves inside swapExactTokensForETH.",N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router02 router (addLiquidity),"Two txs detected, both call getReserves inside addLiquidity.",N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,"It operate on AMM pool, thus considered FP. Many entry point in SLP, UniswapV2",,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,Seems to be a arbitrage bot. FN since it operate on the pool directly,,N,N/A
-Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router02,,N,N/A
-Uniswap,RT,,,,,getReserves,,,,Y,Vulnerable calculation of LP_value,,N,N/A
-Uniswap,RR,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),This is an Uniswap-like router.,N,N/A
-Uniswap,RR,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),This is an Uniswap-like router.,N,N/A
+Uniswap,RT,0x58aeef2835148538eb5dbd335ee092755ee239a3,DSProxy -> MCDSaverTaker,0x93f70d8d10a2240d3a7a81ef1c236bddcc8ac50f723042b14d20d368817c789d,0xd92c6a2e872420854d5f5f621dad336e276498c420e37072099246978c42bb9c,getReserves,0x7a250d5630b4cf539739df2c5dacb4c659f2488d,UniswapV2Router02,705,N,From UniswapV2Router02 router (swapExactTokensForETH),"Two txs detected, both call getReserves inside swapExactTokensForETH.",N,N/A
+Uniswap,RT,0x60a02cd1e3443e8ab7825dccf8d7080eb78bca6f,Migrator2,0xb7b21b0bdfe3a34f7c8f1909ff231be65e33a4eda2194b359278c8f2779bb904,0xe9a354dc54d379fe432c8a2258ccc3d8fb213f28678555a91c28fd29b24da885,getReserves,0xd9e1ce17f2641f24ae83637ab66a2cca9c378b9f,UniswapV2Router02,435,N,From UniswapV2Router02 router (addLiquidity),"Two txs detected, both call getReserves inside addLiquidity.",N,N/A
+Uniswap,RT,0xb780936cd722d8e755f167f1ae4f2551f84e9a3b,DSProxy -> Compound cuni,0xb808e20346c51d10f081099af90e6c18aa53dbf9c8881c99ab27dcf9788625da,,getReserves,0xd9e1ce17f2641f24ae83637ab66a2cca9c378b9f,UniswapV2Router02,N/A,N,"It operate on AMM pool, thus considered FP. Many entry point in SLP, UniswapV2",,N,N/A
+Uniswap,RT,0xf6b366a9a248e298e28afebe4b20e25548e4ee33,Proxy -> OneInchExchange,0xcbdd4e1938edc7b6a4291cd2b4db352c808beebf7485fe9c501e8d42f54d7dd9,,getReserves,0x11111254369792b2ca5d084ab5eea397ca8fa48b,OneInchExchange,770,N,Seems to be a arbitrage bot. FN since it operate on the pool directly,,N,N/A
+Uniswap,RT,0xd38b3bbde24931ba52d306fd3ad8939807f14de9,SushiLPStrategy,0xd985d7672e1cfc2f640a3e1d5e826d0bd9aaeb4d28ae3b4c1fbae9b033d2e4d0,,getReserves,0x06da0fd433c1a5d7a4faa01111c044910a184553,UniswapV2Router02,451,N,From UniswapV2Router02,,N,N/A
+Uniswap,RT,0x84be8517aa1ac3027b89a83e64b8c039c71b9176,WarpVaultLP,0xe16b8eb01f13aa897fb5329401a7ca475fea87addd8e523ceaf2df3d785b5859,0xf85ab7297fcdcb6e9c44e3ecbd9665d4eca51c6d6d067b06e607d3b374eb5b00,getReserves,0xff426bb249c53282c6ef6f1973b07f175362e0e8,UniswapLPOracleFactory.getUnderlyingPrice,1380,Y,Vulnerable calculation of LP_value,,N,N/A
+Uniswap,RR,0xdbb451fbf9fc47fbb5b9c6b1c1c8c99ddf4a4bf4,UniswapV2Router02,0x8c0992366d168389f757d4149fb207ae6e616fde7ec9fec6f164dd04900e1a6f,,getReserves,0xdbb451fbf9fc47fbb5b9c6b1c1c8c99ddf4a4bf4,UniswapV2Router02,384,N,Direct operation on AMM (add liquidity),This is an Uniswap-like router.,N,N/A
+Uniswap,RR,0x8f9a39119a066e196752ad495f4703fc5c6e2b8d,KingSwapRouter,0x46e2e5ca878fd9c625cc08c0e59853d109d7569b0dd3621dfe5b31f45cdb7b95,0x9a5c07c411d61a931004df09e8e8c573e28054bb4a7f7919a29ec7a1096799b9,getReserves,0x8f9a39119a066e196752ad495f4703fc5c6e2b8d,KingSwapRouter,45,N,Direct operation on AMM (add liquidity),This is an Uniswap-like router.,N,N/A
 Uniswap,RR,,,,,getReserves,,,,Y,Stake amount depends on AMM state,,Y,Contacting admin
 Uniswap,"RT, RR",,,,,getReserves,,,,Y,Mint an NFT depends on Uniswap pool state,Price oralce is closed source.,Y,Contacting admin
 Kyber,RT,,,,,getExpectedRate,,,,Y,Number of minted tokens depend on Kyber state,Get ETH/USDT price to calculate the amount of minted tokens.,Y,Contacting admin
-Kyber,RT,,,,,N/A,,,,N,Not calling getExpectedRate,INVALID,N,N/A
-Kyber,RT,,,,,getExpectedRate,,,,N,Direct operation on AMM (swap),,N,N/A
-Kyber,RT,,,,,getExpectedRate,,,,N,Direct operation on AMM (swap),,N,N/A
+Kyber,RT,0x0be7bad74aee0af0220cfb6d46b6ee24799c028d,UserWallet,0x6c0f6be13346ce7bc257e19a8b58aefe7e9bc9f0d603c983487ef8a994d16a8e,,N/A,N/A,N/A,N/A,N,Not calling getExpectedRate,INVALID,N,N/A
+Kyber,RT,0xed0da07aab7257df53efc4dfc076745744138ed9,TokenExchanger,0x93cd50709f7a11f3f1da718631ec77c8a65441f499a57df231ee3a3f3bdccf0e,,getExpectedRate,0xed0da07aab7257df53efc4dfc076745744138ed9,TokenExchanger,1103,N,Direct operation on AMM (swap),,N,N/A
+Kyber,RT,0xd8ee69652e4e4838f2531732a46d1f7f584f0b7f,bZxProtocol,0xe7fa447e6aaa1b37e4bbe98195eadd03ddc34081ed94e07fec6eeb30844e71e1,,getExpectedRate,0xd16583c912bda99c2919256c58e19dcbdf55e7b6,SwapsImplKyber,1019,N,Direct operation on AMM (swap),,N,N/A
