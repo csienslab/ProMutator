@@ -1,0 +1,69 @@
+Ref AMM,Detection Rule,Contract Address,Contract Name,Transactions,Transactions (More),Price-related Function,Price Oracle Contract Address,Price Oracle Contract Name,Line,Vulnerable (TP),Short Reason,Comments,Currently Vulnerable,Disclosure Progress
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),"Though calc_token_amount is used, it does not affect transferred amounts.",N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Withdrawal amount depends on Curve pool state,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,,N,N/A
+Curve,RT,,,,,"calc_withdraw_one_coin,
+calc_token_amount",,,,Y,Self balance depends on Curve pool state ,"See the convert_shares_rate function. Same as the Value DeFi attack.
+This vault is now invulnerable since the strategy has changed.",N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source.,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source.,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,Y,Contacting admin
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,Price oracle is closed source. This vault is now invulnerable since the strategy has changed.,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Self balance depends on Curve pool state ,,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,Invested underlying balance depends on Curve pool state,,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,"Direct operation on AMM (withdraw & remove liquidity), yet the price oracle 
+contract seems to be vulnerable to POA",,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,Y,use the value return from calc_withdraw_one_coin to calculate balance,,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (withdraw & remove liquidity),,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Manipulate on AMM pool directly,,N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),"This vault is different from the other with the same name.
+This one uses get_virtual_price and thus is not vulnerable.",N,N/A
+Curve,RT,,,,,calc_withdraw_one_coin,,,,N,Direct operation on AMM (remove liquidity),,N,N/A
+Curve,RT,,,,,N/A,,,,N,N/A,INVALID. Not Curve-based price oracle.,N,N/A
+Curve,RT,,,,,calc_token_amount,,,,N,Direct operation on AMM (add liquidity),,N,N/A
+Curve,RT,,,,,calc_token_amount,,,,N,Direct operation on AMM (remove liquidity),This is Curve Zap and thus should be out-of-scope.,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),Calculate how many tokens are needed before adding liquidity.,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),Calculate how many tokens are needed before adding liquidity.,N,N/A
+Uniswap,RT,,,,,getReserves,,,,Y,User's reward depends on Uniswap pool state,Calculate how many LP tokens can be obtained for a given amount of ETH.,Y,Contacting admin
+Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),"The entry function is ""provide(uint256 value)"".",N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
+Uniswap,RT,,,,,getReserves,,,,Y,Unstake amount of LP tokens depends on Uniswap pool state,,Y,Admin acknowledged
+Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router01 router,,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,Direct operation on AMM (swap),Price oracle contract is closed source.,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,"It will not allow amount of Weth become too high, which is kind of anti-flashloan, 
+also it directly manipulate on AMM pools, this considered FP.",,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router02 router (swapExactTokensForETH),"Two txs detected, both call getReserves inside swapExactTokensForETH.",N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router02 router (addLiquidity),"Two txs detected, both call getReserves inside addLiquidity.",N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,"It operate on AMM pool, thus considered FP. Many entry point in SLP, UniswapV2",,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,Seems to be a arbitrage bot. FN since it operate on the pool directly,,N,N/A
+Uniswap,RT,,,,,getReserves,,,,N,From UniswapV2Router02,,N,N/A
+Uniswap,RT,,,,,getReserves,,,,Y,Vulnerable calculation of LP_value,,N,N/A
+Uniswap,RR,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),This is an Uniswap-like router.,N,N/A
+Uniswap,RR,,,,,getReserves,,,,N,Direct operation on AMM (add liquidity),This is an Uniswap-like router.,N,N/A
+Uniswap,RR,,,,,getReserves,,,,Y,Stake amount depends on AMM state,,Y,Contacting admin
+Uniswap,"RT, RR",,,,,getReserves,,,,Y,Mint an NFT depends on Uniswap pool state,Price oralce is closed source.,Y,Contacting admin
+Kyber,RT,,,,,getExpectedRate,,,,Y,Number of minted tokens depend on Kyber state,Get ETH/USDT price to calculate the amount of minted tokens.,Y,Contacting admin
+Kyber,RT,,,,,N/A,,,,N,Not calling getExpectedRate,INVALID,N,N/A
+Kyber,RT,,,,,getExpectedRate,,,,N,Direct operation on AMM (swap),,N,N/A
+Kyber,RT,,,,,getExpectedRate,,,,N,Direct operation on AMM (swap),,N,N/A
