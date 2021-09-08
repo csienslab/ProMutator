@@ -1,0 +1,2 @@
+WEB3_IPC_PATH = ''
+ETHERSCAN_API_KEY = ''
