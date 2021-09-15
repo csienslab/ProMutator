@@ -109,27 +109,4 @@ analyze_mutate_function_input(target_tx)
     * 0xc75f3722757f1a77a55fce91b7ff82bda26f8ce84e1df77248860bddacd07649
 * Normal Tx pluoto (pUSDC) (RT):
     * 0x4728ba55d620fb42641885d15f78ba2f2e907642135a300d2e93e17002a070e8
-### Vulnerable contracts mentioned in the paper
 
-* Origin Dollar:
-    * 0x503f96f222cde9a114a028e6def163f7449753747f19be29874e2a025f525137
-* Crit (cDAI):
-    * 0x9fc8b512171f7c3eb8c390d27c457c6a3348e7600863ab8f15389b1f1f7e03be
-* Crit (cUSDT)
-    * 0x41bc916d0da8d083481cce2e3a79b31a4af1e22d0de6e019bb0d076883c355c9
-* Crit (cUSDC)
-    * 0x5c987bbd85886202f6c39f078763ed21ea598402ff572504c1748553b7f7317b
-* bamVault (bUSDC):
-    * 0x3ab0fa8423809a9076e6d5eec21892c22dc50bbeb92c42f809360d0e57ac933f
-* bamVault (bDAI):
-    * 0xb25ef46b1faf61922fa48ee15b8e008b4bbfc4695418d7c32895d20658808c77
-* bamVault (bUSDT):
-    * 0x5e1bcb4175d00c2e4b50d3a4824d97d965d31525378b7fba874a10f2c5b354d4
-* oneearth (oUSDT):
-    * 0xefd910f442940b30b130e2c0b4eff0342ab00537dd8ce8ca11712366873d2791
-* oneearth tether USDT:
-    * 0x5e1bcb4175d00c2e4b50d3a4824d97d965d31525378b7fba874a10f2c5b354d4
-* StrategySwerveUSD:
-    * 0x8eef7931a2dc895d400486611dc7ddbbbeec35d9d75fb1670d8cebbd7d5e82b5
-* DepositHelper:
-    * 0x8eef7931a2dc895d400486611dc7ddbbbeec35d9d75fb1670d8cebbd7d5e82b5
